@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimmy Phan</title>
+    <title>Resume</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
 <body>
@@ -22,7 +23,16 @@
                         <p class = "description"> </p>
                         <span class ="profile_name_last_name">Phan</span>
                     </h1>
-                    <p class = "profile_title">Computer Science Student</p>
+                    <p class = "profile_title">I'm <span class="auto-type"></span></p>
+                    <script> 
+                        var typed = new Typed(".auto-type", {
+                            strings: ["studying computer science",
+                                      "eating", "sleeping"  ],
+                            typeSpeed: 200,
+                            backSpeed: 100,
+                            loop: true
+                        })
+                    </script>
                     <p class = "description"> 
                         Hi my name is Jimmy Phan and welcome to my personal website! 
                         I made this website to document my journey not only through software development but also through life.
