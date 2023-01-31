@@ -5,8 +5,18 @@
 }
 
 :root {
-    --primary-color: blue;
-    --text-color: black;
+    --lightHover-color: blue;
+    --lightText-color: black;
+    --lightBackground-color: lightgray;
+    --lightContainer-color: white;
+
+    --darkHover-color: rgb(102, 11, 11);
+    --darkText-color: beige;
+    --darkBackground-color: navy;
+    --darkContainer-color: gray;
+
+    --lightLine-color: gray;
+    --darkLine-color: beige;
 
 }
 
@@ -16,14 +26,14 @@ html {
 
 body {
     font-family:'Times New Roman', Times, serif;
-    background-color: lightgray;
-    color: black;
+    background-color: var(--lightBackground-color);
+    color: var(--lightText-color);
 }
 
 /* Common Styles */
 
 span {
-    color: black;
+    color: var(--lightText-color);
 }
 
 img {
@@ -32,38 +42,39 @@ img {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--lightText-color);
 }
+
 
 .description {
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: 400px;
-    color: var(--text-color);
+    color: var(--lightText-color);
 }
 
 .title {
-    color: black;
+    color: var(--lightText-color);
     font-weight: 700;
     font-size: 2rem;
 }
 
 .item_pretitle {
     font-size: 1.4rem;
-    color: var(--text-color);
+    color: var(--lightText-color);
     font-weight: 300;
 }
 
 .item_title {
     font-size: 1.5rem;
-    color: black;
+    color: var(--lightText-color);
     font-weight: 500;
     margin: 0.8rem 0;
 }
 
 .item_subTitle {
     font-size: 1.2rem;
-    color: var(--text-color);
+    color: var(--lightText-color);
     font-weight: 400;
 }
 
@@ -74,7 +85,7 @@ a {
     margin: 0 auto;
     display: grid;
     padding: 5rem;
-    background: white;
+    background: var(--lightContainer-color);
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
@@ -137,35 +148,16 @@ a {
 }
 
 .profile_name_first_name {
-    color: black;
+    color: var(--lightText-color);
     font-weight: 200;
     font-size: clamp (2rem, 8vw, 4rem);
     display: block;
     margin-bottom: -0.8rem;
 }
 
-.profile_name_lastName {
-    color: black;
-    font-weight: 700;
-    font-size: clamp(2.5rem, 15 vw, 7rem);
-    text-transform: uppercase;
-    display: block;
-}
-
 .profile_title {
     font-size: 1.3rem;
     font-weight: 300;
-}
-
-.download_button {
-    display: block;
-    text-decoration : underline;
-    font-size: 1.6rem;
-    margin-top: 1 rem;
-}
-
-.download_button:hover {
-    color: var(--primary-color);
 }
 
 @media only screen and (max-width: 768px) {
@@ -214,11 +206,12 @@ a {
     gap: 0.5rem;
     align-items: center;
     justify-content: flex-start;
-    color: var(--text-color);
+    color: var(--lightText-color);
 }
 
-.social_item:hover {
-    color: var(--primary-color);
+.social_item:hover,
+.span1:hover {
+    color: var(--lightHover-color);
 }
 
 .social_item svg {
@@ -232,7 +225,7 @@ hr {
     margin-top: 5rem;
     margin-bottom: 1rem;
     border: none;
-    border-top: 2px solid gray;
+    border-top: 2px solid var(--lightLine-color);
 }
 
 @media only screen and (max-widith: 768px) {
