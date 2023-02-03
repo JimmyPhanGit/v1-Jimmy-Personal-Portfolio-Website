@@ -5,19 +5,20 @@
 }
 
 :root {
-    --lightHover-color: blue;
-    --lightText-color: black;
-    --lightBackground-color: lightgray;
-    --lightContainer-color: white;
+    --hover-color: blue;
+    --text-color: black;
+    --background-color: lightgray;
+    --container-color: white;
+    --line-color: gray;
 
-    --darkHover-color: rgb(102, 11, 11);
-    --darkText-color: beige;
-    --darkBackground-color: navy;
-    --darkContainer-color: gray;
+}
 
-    --lightLine-color: gray;
-    --darkLine-color: beige;
-
+.dark-theme {
+    --hover-color: rgb(102, 11, 11);
+    --text-color: rgb(196, 196, 89);
+    --background-color: gray;
+    --container-color: navy;
+    --line-color: beige;
 }
 
 html {
@@ -26,14 +27,20 @@ html {
 
 body {
     font-family:'Times New Roman', Times, serif;
-    background-color: var(--lightBackground-color);
-    color: var(--lightText-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.top-corner {
+    position: absolute;
+    top: 5;
+    
 }
 
 /* Common Styles */
 
 span {
-    color: var(--lightText-color);
+    color: var(--text-color);
 }
 
 img {
@@ -42,7 +49,7 @@ img {
 
 a {
     text-decoration: none;
-    color: var(--lightText-color);
+    color: var(--text-color);
 }
 
 
@@ -50,31 +57,36 @@ a {
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: 400px;
-    color: var(--lightText-color);
+    color: var(--text-color);
+}
+
+#icon {
+    width: 30px;
+    cursor: pointer;
 }
 
 .title {
-    color: var(--lightText-color);
+    color: var(--text-color);
     font-weight: 700;
     font-size: 2rem;
 }
 
 .item_pretitle {
     font-size: 1.4rem;
-    color: var(--lightText-color);
+    color: var(--text-color);
     font-weight: 300;
 }
 
 .item_title {
     font-size: 1.5rem;
-    color: var(--lightText-color);
+    color: var(--text-color);
     font-weight: 500;
     margin: 0.8rem 0;
 }
 
 .item_subTitle {
     font-size: 1.2rem;
-    color: var(--lightText-color);
+    color: var(--text-color);
     font-weight: 400;
 }
 
@@ -85,7 +97,7 @@ a {
     margin: 0 auto;
     display: grid;
     padding: 5rem;
-    background: var(--lightContainer-color);
+    background: var(--container-color);
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
@@ -148,7 +160,7 @@ a {
 }
 
 .profile_name_first_name {
-    color: var(--lightText-color);
+    color: var(--text-color);
     font-weight: 200;
     font-size: clamp (2rem, 8vw, 4rem);
     display: block;
@@ -206,12 +218,12 @@ a {
     gap: 0.5rem;
     align-items: center;
     justify-content: flex-start;
-    color: var(--lightText-color);
+    color: var(--text-color);
 }
 
 .social_item:hover,
 .span1:hover {
-    color: var(--lightHover-color);
+    color: var(--hover-color);
 }
 
 .social_item svg {
@@ -225,7 +237,7 @@ hr {
     margin-top: 5rem;
     margin-bottom: 1rem;
     border: none;
-    border-top: 2px solid var(--lightLine-color);
+    border-top: 2px solid var(--line-color);
 }
 
 @media only screen and (max-widith: 768px) {
