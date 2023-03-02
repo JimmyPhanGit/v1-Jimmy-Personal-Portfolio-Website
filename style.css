@@ -23,13 +23,59 @@
     color: white;
 }
 
+/** Projects / cards section */
+
+.projects{
+    text-align: center;
+}
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 20px);
+    max-width: 922px;
+    gap: 10px;
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+
+.card:hover:before {
+    opacity: 1;
+}
+
+.card::before{
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 500ms;
+    border-radius: inherit;
+    content: "";
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    z-index: 2;
+}
 
 
 
 /** media version */
 
 @media (min-width: 768px){
-    .news-input {
-        width: 50%;
+    #cards{
+        align-items: center;
+        justify-content: center;
     }
 }
