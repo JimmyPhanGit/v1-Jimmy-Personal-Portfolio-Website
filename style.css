@@ -36,16 +36,17 @@
   height: 100vh;
   justify-content: center;
   margin: 0px;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0px;
 }
 
 #cards{
     display: flex;
-    width: calc(100% - 20px);
+    width: calc(100% - 40x);
     max-width: 916px;
     gap: 8px;
     justify-content: center;
+    text-decoration: none;
 }
 
 .card{
@@ -53,8 +54,8 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     cursor: pointer;
-    height: 250px;
-    width: 446px;
+    height: 300px;
+    width: 375px;
     position: relative;
     color: white;
 }
@@ -146,10 +147,12 @@
 
 /** media version */
 
-@media (min-width: 768px){
-    #cards{
+@media (max-width: 768px){
+    #card{
         align-items: center;
         justify-content: center;
+        width: 50%;
+        height: 50%;
     }
 }
 
